@@ -1,0 +1,115 @@
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: billabong, 'billabongregular';
+    text-align: center;
+    font-weight: 100;
+    font-size: 13rem;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+    color: black;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'billabongregular';
+    src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot");
+    src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix") format('embedded-opentype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff") format('woff'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf") format('truetype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.photoGrid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.figure {
+    border: 1px solid #d3d3d3;
+    flex-basis: calc(33.333% - 4rem);
+    padding: 2rem;
+    flex-grow: 1;
+    max-width: 0 2rem 2rem 2rem;
+}
+
+.photo {
+    width: calc(100% + 4rem);
+    margin: -2rem 0 0 -2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 15px;
+    line-height: 2;
+    padding: 5px;
+}
+
+button:hover {
+    border-width: 3;
+}
+
+.remove-button {
+    color: red;
+    flex-basis: 48%;
+    border: 2px solid #f2f2f2;
+}
+
+.add-button {
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    /* background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat; */
+    background: url("https://cdn-icons-png.flaticon.com/512/60/60740.png") center no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+.add-form {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 45px;
+    text-align: center;
+}
+
+.add-form input {
+    font-family: sans-serif;
+    background-color: #f2f2f2;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    font: 14px;
+    margin: 0 0 15px;
+}
+
+.add-form button {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    background-color: #065784;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-form button:hover {
+    background-color: #7B8589;
+    border-color: blue;
+    border: solid;
+}
