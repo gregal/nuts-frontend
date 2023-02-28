@@ -1,59 +1,46 @@
-import React, { Component, Fragment } from 'react'
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Title from './Title';
 import PhotoWall from './PhotoWall';
 import AddPhoto from './AddPhoto';
+import { useEffect, useState } from 'react';
   
-class Main extends Component {
-    constructor(posts) {
-        super(posts)
-        this.state = {
-            posts: []
-        }
-        this.addPhoto = this.addPhoto.bind(this);
-        this.removePhoto = this.removePhoto.bind(this);
-        this.navigate = useNavigate()
-    }
+function Main({fetchPosts}) {
     
-    addPhoto(submittedPost) {
+    const [posts, setPosts] = useState([]);
+
+    function addPhoto(submittedPost) {
         console.log(submittedPost)
-        this.setState((state) => ({
-            posts: state.posts.concat(submittedPost)
-        }))
+        setPosts(posts.concat(submittedPost))
     }
     
-    removePhoto(removedPost) {
+    function removePhoto(removedPost) {
         console.log(removedPost)
-        this.setState((state) => ({
-            posts: state.posts.filter(post => post !== removedPost)
-        }))
+        setPosts(posts.filter(post => post !== removedPost))
     }
 
-    render() {
-        return (
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={
-                        <>
-                        <Title value="Photowall" />
-                        <PhotoWall
-                            posts={this.state.posts}
-                            onRemovePhoto={this.removePhoto}
-                            />
-                        </>
-                    }/>
-                    <Route path='/add-photo' element={
-                        <AddPhoto onAddPhoto={this.addPhoto}/>
-                    }/>
-                </Routes>
-            </BrowserRouter>
-        )
-    }
+    useEffect(() => {
+        const data = fetchPosts()
+        setPosts(data)
+    }, [fetchPosts])
 
-    componentDidMount() {
-        const data = this.props.fetchPosts()
-        this.setState({ posts: data })
-    }
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={
+                    <>
+                    <Title value="Photowall" />
+                    <PhotoWall
+                        posts={posts}
+                        onRemovePhoto={removePhoto}
+                        />
+                    </>
+                }/>
+                <Route path='/add-photo' element={
+                    <AddPhoto onAddPhoto={addPhoto}/>
+                }/>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default Main

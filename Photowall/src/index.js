@@ -28,5 +28,7 @@ function getHardcodedPosts() {
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <Main fetchPosts={getHardcodedPosts}/>
+  <React.StrictMode>
+    <Main fetchPosts={getHardcodedPosts}/>
+  </React.StrictMode>
 )
