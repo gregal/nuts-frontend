@@ -13,7 +13,7 @@ function AddPhoto(props) {
         if (link && description) {
             
             const post = {
-                id: 0,
+                id: Number(new Date()),
                 imageLink: link,
                 description: description
             }
