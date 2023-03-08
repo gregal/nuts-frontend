@@ -1,15 +1,7 @@
 import logo from '../../img/logo.svg';
 import '../Welcome.css';
 
-type Props = {
-    onAdvance:()=>void
-}
-
-export function WelcomeStep1( props:Props ) {
-
-    function onClickAdvance() {
-        props.onAdvance()
-    }
+export function WelcomeStep1( /*props:Props*/ ) {
 
     return (
         <>
@@ -22,7 +14,6 @@ export function WelcomeStep1( props:Props ) {
                 <p>
                     O jeito mais fácil, rápido e gosto de pedir pratos feitos sob medida pra você.
                 </p>
-                <button onClick={onClickAdvance} >Próximo</button>
             </header>
         </div>
         </>
