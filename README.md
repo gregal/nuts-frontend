@@ -11,7 +11,7 @@ This repository currently holds 2 different projects:
 
 Nuts UI is a frontend application, an experiment to learn and exercise with React, TypeScript, GitHub Workflows and other technologies, while also aiming to support a UX project from my wife (a platform/application that generates culinary recipes to the user based on their preferences and restrictions).
 
-This app is currently minimalist, actually just featuring the beginning of what should be a welcome wizard.
+This app is currently minimalist, actually just featuring the beginning of what should be a welcome wizard. It's using TypeScript, Material UI and react-swipeable-views.
 
 ## Photowall
 
