@@ -1,73 +1,30 @@
 # nuts-frontend
-Nuts app
 
-# Getting Started with Create React App
+## Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository currently holds 2 different projects:
 
-## Available Scripts
+- [Nuts UI](/nuts-ui/)
+- [Photowall](/Photowall/)
 
-In the project directory, you can run:
+## Nuts
 
-### `npm start`
+Nuts UI is a frontend application, an experiment to learn and exercise with React, TypeScript, GitHub Workflows and other technologies, while also aiming to support a UX project from my wife (a platform/application that generates culinary recipes to the user based on their preferences and restrictions).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This app is currently minimalist, actually just featuring the beginning of what should be a welcome wizard.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Photowall
 
-### `npm test`
+Photowall is an example project instructed in an online React course I took recently. The application allows the user to view, add and delete images ("photos") from a photowall, which is a grid in the page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For that, the course goes through class components, function components, state management, React concepts in general, routing with React routing, CSS and others.
 
-### `npm run build`
+During the course, I chose to do some things slightly different from the author, either because I thought mine would be a better practice, or because the course was recorded before React 18 and some things might have evolved (such as React Router).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deploy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This repository also features a GitHub Workflow, implemented in [.github/workflows/](.github/workflows/azure-static-web-apps-white-water-042353a0f.yml).
+It automatically builds and deploys the [Nuts UI](/nuts-ui/) application, specifically, to an Azure Static Web App that I have created under a personal subscription.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That can be accessed on:
+https://white-water-042353a0f.2.azurestaticapps.net/
